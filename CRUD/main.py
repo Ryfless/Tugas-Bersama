@@ -5,12 +5,12 @@ def decide():
 
 def create(data):
     print(f"<File {data} dibuat>")
-    i = open(f"crud\{data}.txt", "x")
+    i = open(f"{data}.txt", "x")
     i.close()
 
 def read(data):
     print("<Operasi read dijalankan>")
-    i = open(f"crud\{data}.txt", "r")
+    i = open(f"{data}.txt", "r")
     display = i.read()
     i.close()
     return display
@@ -21,13 +21,13 @@ def update(data):
 
     if option == 1:
         print("<Operasi ubah dijalankan>")
-        i = open(f"crud\{data}.txt", "w")
+        i = open(f"{data}.txt", "w")
         inp = input("Masukan input: ")
         i.write(inp)
         i.close()
     elif option == 2:
         print("<Operasi tambah dijalankan>")
-        j = open(f"crud\{data}.txt", "a")
+        j = open(f"{data}.txt", "a")
         inp = input("Masukan input: ")
         j.write("\n" + inp)
         j.close()
@@ -36,7 +36,7 @@ def update(data):
 
 def delete(data):
     print(f"Data dalam {data}.txt akan dihapus")
-    i = open(f"crud\{data}.txt", "w")
+    i = open(f"{data}.txt", "w")
     i.write(" ")
 
 def main():
